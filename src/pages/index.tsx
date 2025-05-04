@@ -12,45 +12,22 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export default function Home() {
   return (
     <>
-<Head>
-  {/* Temel Meta */}
-  <meta charSet="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#8d010c" />
-
-  {/* Başlık & Açıklama */}
-  <title>MiniPati Veteriner Kliniği</title>
-  <meta
-    name="description"
-    content="Uşak Merkez’de 7/24 veteriner hizmeti, acil durum müdahalesi, ameliyatlar, ilaç ve mama temini."
-  />
-
-  {/* Favicon & PWA */}
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.json" />
-
-  {/* Open Graph */}
-  <meta property="og:site_name" content="MiniPati Veteriner Kliniği" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="MiniPati Veteriner Kliniği" />
-  <meta
-    property="og:description"
-    content="Uşak Merkez’de 7/24 veteriner hizmeti, acil durum müdahalesi, ameliyatlar, ilaç ve mama temini."
-  />
-  <meta property="og:image" content="https://www.minipativeteriner.com/images/Card.png" />
-  <meta property="og:url" content="https://www.minipativeteriner.com" />
-
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MiniPati Veteriner Kliniği" />
-  <meta
-    name="twitter:description"
-    content="Uşak Merkez’de 7/24 veteriner hizmeti, acil durum müdahalesi, ameliyatlar, ilaç ve mama temini."
-  />
-  <meta name="twitter:image" content="https://www.minipativeteriner.com/images/Card.png" />
-</Head>
-
+      <Head>
+        <title>Uşak Minipati Veteriner Kliniği - 7/24 Veteriner Hizmeti ve Acil Müdahale</title>
+        <meta name="description" content="Minipati Veteriner Kliniği, Uşak'ta 7/24 veteriner hizmeti, acil müdahale, ameliyat, tedavi, ilaç ve mama temini sunar." />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Uşak Minipati Veteriner Kliniği - 7/24 Veteriner Hizmeti" />
+        <meta property="og:description" content="7/24 acil durum müdahalesi, ameliyatlar, muayene ve mama hizmetleri sunan Uşak'ın güvenilir veteriner kliniği." />
+        <meta property="og:url" content="https://www.minipativeteriner.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.minipativeteriner.com/images/Card.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Uşak Minipati Veteriner Kliniği - 7/24 Veteriner Hizmeti" />
+        <meta name="twitter:description" content="7/24 acil müdahale, ameliyat, tedavi ve mama temini sunan Uşak'ın güvenilir veteriner kliniği." />
+        <meta name="twitter:image" content="https://www.minipativeteriner.com/images/Card.png" />
+      </Head>
 
 
       {/* Hero Section */}
