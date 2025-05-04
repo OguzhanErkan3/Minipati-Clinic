@@ -1,15 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 :root {
-  --background: #ffffff;
+  --background: white;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,9 +12,31 @@
     --foreground: #ededed;
   }
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.blink {
+  animation: blink 2.5s infinite;
+}
+.doctor-image {
+
+  object-fit: cover; /* Görselin oranlarını koruyarak kesilmesini sağlar */
+  border-radius: 20px; /* Kenarları yuvarlak yapar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Görsele gölge efekti */
+  transition: transform 0.3s ease; /* Hover efektini yumuşatmak için geçiş */
+}
+
+.doctor-image:hover {
+  transform: scale(1.05); /* Hover sırasında görseli büyütür */
+}
+/* next.js logosunu gizlemek */
+
+
