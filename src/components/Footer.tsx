@@ -1,18 +1,22 @@
 import React from 'react';
-import { FaFacebook, FaWhatsapp, FaInstagram } from "react-icons/fa6";
+import Link from 'next/link';
+import Image from 'next/image';
+import { FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa6';
 
 const Footer: React.FC = () => (
   <footer className="bg-black text-white shadow-xl">
     <div className="container mx-auto px-4 py-4 grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-sm">
       {/* Sol: Logo */}
       <div className="flex justify-center md:justify-start">
-        <a href="/">
-          <img
+        <Link href="/" className="block">
+          <Image
             src="/logo.png"
             alt="MiniPati Veteriner Kliniği Logo"
-            className="w-16 rounded-full"
+            width={64}
+            height={64}
+            className="rounded-full"
           />
-        </a>
+        </Link>
       </div>
       {/* Orta: İletişim */}
       <div className="text-center space-y-1">

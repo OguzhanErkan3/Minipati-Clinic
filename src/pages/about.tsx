@@ -6,12 +6,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { FaGlobe, FaHandshake, FaUsers, FaHeartPulse } from 'react-icons/fa6';
 import { useRouter } from 'next/router';
+import Image from 'next/image';              // ← eklendi
+import Link from 'next/link';                // ← eklendi, eğer Footer veya Navbar içinde <a> kullandıysan onlar da buradan gelmeli
 
 export default function About() {
   const router = useRouter();
 
   // Sayfa görüntüleme takibi
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gtagFunc = (window as any).gtag;
     if (typeof gtagFunc === 'function') {
       gtagFunc('config', 'G-RZ7BT6E143', { page_path: router.asPath });
@@ -126,10 +129,13 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-blue-400 opacity-95 transform group-hover:scale-105 transition-transform duration-500" />
             <div className="relative p-10 text-white flex flex-col justify-between h-full items-center">
               <div className="w-64 h-64 mb-6 overflow-hidden rounded-2xl border-4 border-white shadow-lg">
-                <img
+                {/* <img> yerine Image */}
+                <Image
                   src="/images/vet2.jpeg"
                   alt="Veteriner Hekim Dr. Enes Turan Seval"
-                  className="w-full h-full object-cover"
+                  width={256}
+                  height={256}
+                  className="object-cover"
                 />
               </div>
               <h3 className="text-3xl font-bold mb-2">Dr. Enes Turan Seval</h3>

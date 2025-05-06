@@ -1,3 +1,12 @@
+'use client';
+
+// Declare the global Window.gtag signature to avoid using `any`
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -11,7 +20,7 @@ export default function Contact() {
 
   // Sayfa görüntüleme takibi
   useEffect(() => {
-    const gtagFunc = (window as any).gtag;
+    const gtagFunc = window.gtag;
     if (typeof gtagFunc === 'function') {
       gtagFunc('config', 'G-RZ7BT6E143', {
         page_path: router.asPath,
@@ -21,7 +30,7 @@ export default function Contact() {
 
   // Event takibi fonksiyonu
   const trackEvent = (category: string, label: string): void => {
-    const gtagFunc = (window as any).gtag;
+    const gtagFunc = window.gtag;
     if (typeof gtagFunc === 'function') {
       gtagFunc('event', 'click', {
         event_category: category,
@@ -75,7 +84,7 @@ export default function Contact() {
             "@context": "https://schema.org",
             "@type": "VeterinaryCare",
             "name": "MiniPati Veteriner Kliniği",
-            "url": "https://www.minipativeteriner.com/iletisim",
+            "url": "https://www.minipativeteriner.com/contact",
             "logo": "https://www.minipativeteriner.com/images/logo.png",
             "image": "https://www.minipativeteriner.com/images/card.png",
             "description": "MiniPati Veteriner Kliniği ile 7/24 acil veteriner hizmeti ve randevu için iletişime geçin.",
@@ -88,9 +97,9 @@ export default function Contact() {
               "addressCountry": "TR"
             },
             "sameAs": [
-              "https://www.facebook.com/Minipati-Veteriner-Klini%C4%9Fi",
+              "https://www.facebook.com/p/Minipati-Veteriner-Klini%C4%9Fi-61555272961477",
               "https://www.instagram.com/minipativeteriner/",
-              "https://api.whatsapp.com/send/?phone=05411236464"
+              "https://api.whatsapp.com/send?phone=905411236464"
             ]
           }`}
         </script>
@@ -107,38 +116,56 @@ export default function Contact() {
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-4 max-w-5xl mx-auto px-2">
-            <div onClick={() => trackEvent('Contact', 'Phone Call')}>
+            <a
+              href="tel:+905411236464"
+              onClick={() => trackEvent('Contact', 'Phone Call')}
+              className="block"
+            >
               <SocialMediaButton
                 icon={FaPhone}
                 bgColor="bg-red-500"
-                link="tel:+905411236464"
                 title="Bize Ulaşın"
               />
-            </div>
-            <div onClick={() => trackEvent('Contact', 'WhatsApp Chat')}>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=905411236464"
+              onClick={() => trackEvent('Contact', 'WhatsApp Chat')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
               <SocialMediaButton
                 icon={FaWhatsapp}
                 bgColor="bg-green-500"
-                link="https://api.whatsapp.com/send/?phone=05411236464"
                 title="Whatsapp"
               />
-            </div>
-            <div onClick={() => trackEvent('Contact', 'Instagram Visit')}>
+            </a>
+            <a
+              href="https://www.instagram.com/minipativeteriner/"
+              onClick={() => trackEvent('Contact', 'Instagram Visit')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
               <SocialMediaButton
                 icon={FaInstagram}
                 bgColor="bg-pink-500"
-                link="https://www.instagram.com/minipativeteriner/"
                 title="Instagram"
               />
-            </div>
-            <div onClick={() => trackEvent('Contact', 'Facebook Visit')}>
+            </a>
+            <a
+              href="https://www.facebook.com/p/Minipati-Veteriner-Klini%C4%9Fi-61555272961477"
+              onClick={() => trackEvent('Contact', 'Facebook Visit')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
               <SocialMediaButton
                 icon={FaFacebook}
                 bgColor="bg-blue-500"
-                link="https://www.facebook.com/p/Minipati-Veteriner-Klini%C4%9Fi-61555272961477"
                 title="Facebook"
               />
-            </div>
+            </a>
           </div>
         </div>
 
