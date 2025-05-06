@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import { FaGlobe, FaHandshake, FaUsers, FaHeartPulse } from 'react-icons/fa6';
 import { useRouter } from 'next/router';
 import Image from 'next/image';              // ← eklendi
-import Link from 'next/link';                // ← eklendi, eğer Footer veya Navbar içinde <a> kullandıysan onlar da buradan gelmeli
+  
 
 export default function About() {
   const router = useRouter();
