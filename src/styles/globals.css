@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: white;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.doctor-image {
+
+  object-fit: cover; /* Görselin oranlarını koruyarak kesilmesini sağlar */
+  border-radius: 20px; /* Kenarları yuvarlak yapar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Görsele gölge efekti */
+  transition: transform 0.3s ease; /* Hover efektini yumuşatmak için geçiş */
+}
+
+.doctor-image:hover {
+  transform: scale(1.05); /* Hover sırasında görseli büyütür */
+}
+/* next.js logosunu gizlemek */

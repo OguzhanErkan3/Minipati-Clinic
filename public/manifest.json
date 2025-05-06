@@ -1,0 +1,22 @@
+{
+    "name": "MiniPati Veteriner Kliniği",
+    "short_name": "MiniPati",
+    "description": "Uşak Merkez’de 7/24 veteriner hizmeti, acil durum müdahalesi, ameliyatlar, ilaç ve mama temini.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#8d010c",
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
