@@ -125,6 +125,7 @@ export default function Contact() {
                 icon={FaPhone}
                 bgColor="bg-red-500"
                 title="Bize Ulaşın"
+                link="tel:+905411236464"
               />
             </a>
             <a
@@ -138,6 +139,7 @@ export default function Contact() {
                 icon={FaWhatsapp}
                 bgColor="bg-green-500"
                 title="Whatsapp"
+                link="https://api.whatsapp.com/send?phone=905411236464"
               />
             </a>
             <a
@@ -151,6 +153,7 @@ export default function Contact() {
                 icon={FaInstagram}
                 bgColor="bg-pink-500"
                 title="Instagram"
+                link="https://www.instagram.com/minipativeteriner/"
               />
             </a>
             <a
@@ -164,6 +167,7 @@ export default function Contact() {
                 icon={FaFacebook}
                 bgColor="bg-blue-500"
                 title="Facebook"
+                link="https://www.facebook.com/p/Minipati-Veteriner-Klini%C4%9Fi-61555272961477"
               />
             </a>
           </div>
