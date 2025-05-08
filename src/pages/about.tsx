@@ -22,7 +22,7 @@ export default function About() {
   }, [router.asPath]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-r from-[#8d010c] via-[#f74b35] to-[#44000b]">
+    <div className="min-h-screen flex flex-col bg-gray-950">
       <Head>
         {/* Temel SEO */}
         <title>Hakkımızda | MiniPati Veteriner Kliniği</title>
