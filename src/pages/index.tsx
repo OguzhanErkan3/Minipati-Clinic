@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Dr. Enes Turan Seval
+              Vet. Hek. Enes Turan Seval
             </h2>
             <p className="text-lg text-gray-600 mb-6 font-light tracking-wide">
               2023’te kurulan kliniğimiz; tedavi ve ameliyatlardaki başarısı ile kısa sürede
